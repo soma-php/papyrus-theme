@@ -9,19 +9,20 @@
     "email": "niklas.s.rosenqvist@gmail.com"
   },
   "devDependencies": {
+    "@babel/core": "^7.10.2",
     "bootstrap": "^4.3.1",
     "del-cli": "^3.0.0",
+    "jquery": "^3.4.1",
     "parcel-bundler": "^1.12.3",
     "popper.js": "^1.15.0",
-    "jquery": "^3.4.1",
     "sass": "^1.23.0-module.beta.1"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "parcel watch styles.html scripts.html --public-url \"themes/papyrus-theme/\"",
-    "build": "parcel build styles.html scripts.html --public-url \"themes/papyrus-theme/\"",
+    "dev": "parcel watch styles.html scripts.html --public-url \"/themes/papyrus-theme/\"",
+    "build": "parcel build styles.html scripts.html --public-url \"/themes/papyrus-theme/\"",
     "clean": "del-cli dist/*",
-    "release": "del-cli dist/* && parcel build styles.html scripts.html --public-url \"themes/papyrus-theme/\" --no-source-maps",
+    "release": "del-cli dist/* && parcel build styles.html scripts.html --public-url \"/themes/papyrus-theme/\"",
     "serve": "php ../../appctrl app:serve"
   }
 }

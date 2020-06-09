@@ -20,7 +20,7 @@
 ])
 
 @section('content')
-    <div class="container container-sm">
+    <div class="container container-md">
         <div class="row">
             <div class="col-12">
                 <h1 class="d-none">Blog archive</h1>

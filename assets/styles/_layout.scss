@@ -165,12 +165,6 @@ h1 {
         border-radius: .3rem;
     }
 
-    hgroup {
-        margin-left: auto;
-        margin-right: auto;
-        max-width: map-get($container-max-widths, "md");
-    }
-
     h2:not(:first-child), h3, h4 {
         margin-top: $spacer * 2;
         margin-bottom: $spacer;
@@ -276,8 +270,6 @@ h1 {
 p.lead,
 .lead > p:first-of-type {
     font-size: 1.25rem;
-    margin-bottom: $spacer * 2;
-    margin-top: $spacer * 2;
 }
 
 .abbr-tooltip {

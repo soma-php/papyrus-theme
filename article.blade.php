@@ -69,12 +69,16 @@
             $bio = $article->bio ?? config('content.author.bio');
         @endphp
 
-        <div class="signature">
-            <div class="author">
-                <p class="name d-none d-sm-block">{{ $author }}</p>
-                <div class="bio">{!! markdown($bio) !!}</div>
+        @if($author)
+            <div class="signature">
+                <div class="author">
+                    <p class="name d-none d-sm-block">{{ $author }}</p>
+                    @if($bio)
+                        <div class="bio">{!! markdown($bio) !!}</div>
+                    @endif
+                </div>
             </div>
-        </div>
+        @endif
         @if($nav)
             @php
                 $pages = query_pages("/blog/")->sortByDesc('published');
