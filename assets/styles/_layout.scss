@@ -1,0 +1,293 @@
+h1 {
+    text-align: center;
+}
+
+#content {
+    padding-top: $jumbotron-padding;
+    padding-bottom: $jumbotron-padding;
+    
+    @include media-breakpoint-up(sm) {
+        padding-top: $jumbotron-padding * 2;
+        padding-bottom: $jumbotron-padding * 2;
+    }
+}
+
+.content {
+    img,
+    picture,
+    embed,
+    iframe {
+        max-width: 100%;
+    }
+
+    ul, ol {
+        & > li:not(:last-of-type) {
+            margin-bottom: $spacer / 2;
+        }
+    }
+
+    .featured-image {
+        margin-bottom: $jumbotron-padding;
+    }
+
+    &:not(.article) h1:first-child {
+        text-align: left;
+        margin-bottom: $spacer * 2;
+    }
+
+    kbd {
+        background: #2d2d2d; // Same as highlightjs theme
+        font-size: .85rem;
+        border-radius: .3rem;
+    }
+
+    :not(pre) > code {
+        font-size: .85rem;
+        color: $body-color;
+        background: $gray-300;
+        border: 1px solid $gray-400;
+        border-radius: .3rem;
+        padding: .2rem .4rem;
+    }
+
+    img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: $spacer;
+        
+        & + em {
+            margin-top: -($spacer / 2);
+            margin-bottom: $spacer;
+            display: block;
+            font-size: 0.85em;
+            width: 100%;
+            text-align: center;
+        }
+    }
+
+    .left,
+    .right {
+        @include media-breakpoint-up(sm) {
+            margin-bottom: $spacer / 2;
+            margin-top: 0.4rem;
+            max-width: 40%;
+        }
+    }
+
+    .left {
+        @include media-breakpoint-up(sm) {
+            margin-right: $spacer;
+            float: left;
+
+            & + em {
+                margin-top: 0;
+                margin-right: $spacer;
+                float: left;
+                text-align: left;
+                clear: left;
+                margin-bottom: $spacer / 2;
+                max-width: 40%;
+            }
+        }
+    }
+
+    .right {
+        @include media-breakpoint-up(sm) {
+            margin-left: $spacer;
+            float: right;
+
+            & + em {
+                margin-left: $spacer;
+                float: right;
+                text-align: right;
+                clear: right;
+                margin-bottom: $spacer / 2;
+                max-width: 40%;
+            }
+        }
+    }
+
+    .tagline {
+        font-size: 1.25rem;
+        text-align: center;
+        margin: $jumbotron-padding 0;
+        padding: ($headings-margin-bottom * 2) $jumbotron-padding;
+        border-top: $border-width $gray-400 dashed;
+        border-bottom: $border-width $gray-400 dashed;
+    
+        @include media-breakpoint-up(sm) {
+            padding: ($headings-margin-bottom * 2) ($jumbotron-padding * 2);
+        }
+    }
+
+    blockquote:not(.excerpt) {
+        position: relative;
+        font-size: 1.25rem;
+        text-align: center;
+        margin: $jumbotron-padding 0;
+        padding: ($headings-margin-bottom * 2) $jumbotron-padding;
+    
+        @include media-breakpoint-up(sm) {
+            padding: ($headings-margin-bottom * 2) ($jumbotron-padding * 2);
+        }
+
+        & > p {
+            margin-bottom: 0;
+        }
+
+        cite {
+            display: block;
+            color: $gray-600;
+            margin-top: $headings-margin-bottom * 2;
+            font-size: .85em;
+
+            &::before {
+                content: "- ";
+            }
+        }
+
+        &::before {
+            display: block;
+            content: "\201C";
+            line-height: 1;
+            font-size: 6em;
+            font-family: Georgia, "Times New Roman", Times, serif;
+            position: absolute;
+            left: 0;
+            top: -0.1em;
+            color: $gray-400;
+        }
+    }
+
+    pre > code {
+        padding: 1rem !important;
+        border-radius: .3rem;
+    }
+
+    hgroup {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: map-get($container-max-widths, "md");
+    }
+
+    h2:not(:first-child), h3, h4 {
+        margin-top: $spacer * 2;
+        margin-bottom: $spacer;
+    }
+
+    h5, h6 {
+        font-family: $font-family-base;
+    }
+
+    h6 {
+        font-weight: bold;
+    }
+
+    .tag {
+        background: $gray-300;
+        color: $gray-600;
+        padding: .15rem .4rem;
+        border-radius: .2rem;
+        text-decoration: none;
+
+        &:not(:last-child) {
+            margin-right: .2rem;
+        }
+
+        @include hover-focus {
+            background: $gray-400;
+        }
+        
+        &::before {
+            font-weight: bold;
+            color: $gray-600;
+            padding-left: .2rem;
+            content: '#';
+        }
+    }
+}
+
+#menu {
+    background: $white;
+    border-top: $border-width #e5e5e5 solid;
+    border-bottom: $border-width #e5e5e5 solid;
+    font-family: $font-family-base;
+
+    .navbar {
+        @include media-breakpoint-down(md) {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+
+    .navbar-toggler {
+        border: none;
+        border-radius: .25rem;
+
+        &:hover,
+        &:focus {
+            background: $light;
+        }
+        &:active {
+            background: darken($light, 7.5%);
+        }
+    }
+
+    @include media-breakpoint-down(md) {
+        .navbar-nav > .nav-item:first-child {
+            margin-top: $nav-link-padding-y;
+        }
+    }
+}
+
+#footer {
+    .copyright {
+        text-align: center;
+        font-size: .85em;
+    }
+}
+
+.container-md {
+    max-width: (map-get($container-max-widths, "lg") + map-get($container-max-widths, "md")) / 2; 
+}
+
+.container-sm {
+    max-width: map-get($container-max-widths, "md");
+}
+
+.page-header  {
+    text-align: center;
+    padding-bottom: $jumbotron-padding;
+    border-bottom: $border-width #e5e5e5 solid;
+    margin-bottom: $jumbotron-padding;
+    
+    @include media-breakpoint-up(sm) {
+        padding-bottom: $jumbotron-padding * 2;
+        margin-bottom: $jumbotron-padding * 2;
+    }
+}
+
+.lead {
+    font-size: inherit;
+    font-weight: inherit; 
+}
+
+p.lead,
+.lead > p:first-of-type {
+    font-size: 1.25rem;
+    margin-bottom: $spacer * 2;
+    margin-top: $spacer * 2;
+}
+
+.abbr-tooltip {
+    .tooltip-inner {
+        background-color: $white;
+        color: $dark;
+        box-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+    }
+
+    .arrow::before {
+        display: none;
+    }
+}

@@ -1,0 +1,27 @@
+{
+  "name": "@soma/papyrus-theme",
+  "version": "1.0.0",
+  "description": "",
+  "license": "MIT",
+  "author": {
+    "name": "Niklas Rosenqvist",
+    "url": "https://www.nsrosenqvist.com/",
+    "email": "niklas.s.rosenqvist@gmail.com"
+  },
+  "devDependencies": {
+    "bootstrap": "^4.3.1",
+    "del-cli": "^3.0.0",
+    "parcel-bundler": "^1.12.3",
+    "popper.js": "^1.15.0",
+    "jquery": "^3.4.1",
+    "sass": "^1.23.0-module.beta.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "parcel watch styles.html scripts.html --public-url \"themes/papyrus-theme/\"",
+    "build": "parcel build styles.html scripts.html --public-url \"themes/papyrus-theme/\"",
+    "clean": "del-cli dist/*",
+    "release": "del-cli dist/* && parcel build styles.html scripts.html --public-url \"themes/papyrus-theme/\" --no-source-maps",
+    "serve": "php ../../appctrl app:serve"
+  }
+}

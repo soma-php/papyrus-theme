@@ -1,0 +1,7 @@
+name: StarterTheme
+engine: blade
+public: ./dist
+templates: ./
+images:
+  sizes: ['576', '768', '992', '1200']
+  rules: ['(max-width: 576px) 576px', '(max-width: 768px) 768px', '992px']

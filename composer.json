@@ -1,0 +1,17 @@
+{
+    "name": "soma/papyrus-theme",
+    "type": "papyrus-theme",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Papyrus\\StarterTheme\\": "lib/"
+        }
+    },
+    "require": {
+        "php": ">=7.0.0",
+        "composer/installers": "~1.6"
+    },
+    "extra": {
+        "installer-name": "papyrus-theme"
+    }
+}

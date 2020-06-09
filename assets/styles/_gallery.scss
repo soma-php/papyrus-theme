@@ -1,0 +1,34 @@
+.blur-up {
+    -webkit-filter: blur(5px);
+    clip: rect(0px, 0px, 0px, 0px);
+    clip-path: inset(0px);
+    filter: blur(5px);
+    transition: filter 400ms, -webkit-filter 400ms, ;
+}
+
+.blur-up:not(.left):not(.right) {
+    width: 100%;
+}
+
+.blur-up.lazyloaded {
+    width: unset;
+    -webkit-filter: blur(0);
+    filter: blur(0);
+}
+
+.gallery {
+    margin: ($spacer * 2) 0;
+
+    &.mosaic {
+        margin-left: -($spacer * 1.2);
+        margin-right: -($spacer * 1.3);        
+        
+        .gallery-item {
+            width: 30%;
+
+            & > img {
+                margin: 0;
+            }
+        }
+    }
+}

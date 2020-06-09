@@ -1,0 +1,59 @@
+#search-form {
+    display: inline-block;
+}
+
+#search-results {
+    padding-top: $jumbotron-padding;
+    border-top: $border-width #e5e5e5 solid;
+    margin-top: $jumbotron-padding; 
+    
+    @include media-breakpoint-up(sm) {
+        padding-top: $jumbotron-padding * 2;
+        margin-top: $jumbotron-padding * 2;
+    }
+
+    .highlight {
+        background: lighten($yellow, 30%);
+        border-radius: 3px;
+    }
+
+    .meta {
+        text-align: left;
+        margin-bottom: $spacer / 2;
+    }
+
+    .tags {
+        margin-top: $spacer / 2;
+
+        .tag {
+            background: none;
+            padding: 0;
+        }
+    }
+
+    .thumbnail {
+        width: 100%;
+    }
+
+    .summary {
+        margin-bottom: 0;
+    }
+
+    .search-item {
+        display: block;
+        padding: $spacer;
+        border-radius: 3px;
+        transition: background-color .15s ease-in-out;
+        color: inherit;
+        text-decoration: inherit;
+        margin-bottom: $spacer;
+
+        &:hover,
+        &:focus {
+            background: $light;
+        }
+        &:active {
+            background: darken($light, 7.5%);
+        }
+    }
+}
