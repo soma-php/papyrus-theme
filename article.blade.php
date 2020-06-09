@@ -34,7 +34,7 @@
     @endif
     {{-- Body --}}
     @if($preview)
-        <blockquote cite="{{ $article->url }}" class="excerpt">{!! markdown($article->description) !!}</blockquote>
+        <blockquote cite="{{ $article->url }}" class="excerpt">{!! markdown($article->excerpt) !!}</blockquote>
     @else
         <div class="article-body {{ $article->hasLead() ? 'lead' : '' }}">
             {!! $article->html !!}
